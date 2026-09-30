@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#641d25">
+<meta name="description" content="Shree Guru Shankaracharya Veda Vidyalaya, Assam — preserving Vedic learning, Gurukula education and Vedic heritage.">
+<meta name="keywords" content="Shree Guru Shankaracharya Veda Vidyalaya, Assam, Veda Vidyalaya, Veda Pathashala, Gurukula, Vedic education, Veda Rakshanam">
+<title>Shree Guru Shankaracharya Veda Vidyalaya | Assam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --maroon:#641d25;--deep:#3d1117;--saffron:#c97824;--gold:#d9aa45;
+ --cream:#fff9ef;--paper:#fffdf9;--ink:#2e2622;--muted:#70635b;
+ --line:#eadfce;--green:#536d4e;--shadow:0 18px 50px rgba(65,28,18,.11);
+ --max:1180px;--radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:"Source Sans 3",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7}
+body.menu-open{overflow:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+button,input,textarea{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.topbar{background:var(--deep);color:#fff8e9;font-size:.9rem}
+.topbar-inner{min-height:38px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.topbar a:hover{color:#ffd878}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,253,249,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{width:55px;height:55px;border-radius:50%;background:var(--deep);display:grid;place-items:center;overflow:hidden;border:2px solid var(--gold);flex:0 0 auto}
+.brand-mark img{width:46px;height:46px;object-fit:contain}
+.brand-text{line-height:1.15}
+.brand-text strong{font-family:Cinzel,serif;font-size:1.02rem;color:var(--maroon);display:block}
+.brand-text span{font-family:"Noto Sans Devanagari",sans-serif;font-size:.75rem;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:5px}
+.nav-links a{padding:10px 11px;border-radius:10px;font-weight:600;color:#51453e;font-size:.94rem}
+.nav-links a:hover,.nav-links a.active{color:var(--maroon);background:#fff2dc}
+.nav-cta{background:var(--maroon)!important;color:#fff!important;padding:11px 17px!important}
+.menu-toggle{display:none;border:1px solid var(--line);background:#fff8ee;border-radius:10px;width:44px;height:44px;cursor:pointer}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--maroon);margin:5px auto;border-radius:2px}
+
+.hero{min-height:690px;position:relative;display:flex;align-items:center;overflow:hidden;color:white;background:#2e1415}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(39,13,16,.9) 0%,rgba(55,20,20,.68) 45%,rgba(39,13,16,.22) 100%),url("images/building.jpg");background-size:cover;background-position:center}
+.hero-pattern{position:absolute;inset:0;opacity:.11;background-image:radial-gradient(circle at 20% 20%,#fff 0 1px,transparent 1.5px),radial-gradient(circle at 80% 70%,#fff 0 1px,transparent 1.5px);background-size:38px 38px}
+.hero-content{position:relative;z-index:2;padding:88px 0}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#ffe1a2;font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.78rem;margin-bottom:18px}
+.eyebrow:before{content:"";width:30px;height:1px;background:var(--gold)}
+.hero h1{font-family:Cinzel,serif;font-size:clamp(2.2rem,5vw,4.6rem);line-height:1.08;margin-bottom:14px;max-width:850px}
+.hero .sanskrit{font-family:"Noto Sans Devanagari",sans-serif;font-size:clamp(1.15rem,2vw,1.65rem);color:#ffe6b4;margin-bottom:18px}
+.hero-lead{font-family:"Playfair Display",serif;font-size:1.12rem;max-width:760px;color:#fff7ea}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--gold);color:#351713}.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-light{border-color:rgba(255,255,255,.45);color:#fff;background:rgba(255,255,255,.08)}.btn-light:hover{background:rgba(255,255,255,.16)}
+.hero-card{background:rgba(255,250,239,.94);color:var(--ink);border-radius:24px;padding:28px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.4)}
+.hero-card .seal{width:96px;height:96px;border-radius:50%;background:var(--deep);border:3px solid var(--gold);display:grid;place-items:center;margin-bottom:18px}
+.hero-card .seal img{width:76px;height:76px;object-fit:contain}
+.hero-card h3{font-family:Cinzel,serif;color:var(--maroon);font-size:1.25rem;margin-bottom:9px}
+.hero-card p{color:var(--muted);margin-bottom:12px}
+.hero-card .address{font-weight:700;color:var(--ink)}
+.scroll-note{display:inline-flex;align-items:center;gap:8px;margin-top:30px;color:#f8e7c6;font-size:.88rem}
+
+.section{padding:88px 0}
+.section.alt{background:var(--cream)}
+.section-head{text-align:center;max-width:780px;margin:0 auto 46px}
+.kicker{color:var(--saffron);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem}
+.section h2{font-family:Cinzel,serif;color:var(--maroon);font-size:clamp(1.8rem,3.5vw,2.7rem);line-height:1.18;margin:8px 0 12px}
+.section-head p{color:var(--muted);font-size:1.04rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-48px;position:relative;z-index:4}
+.stat{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;box-shadow:var(--shadow)}
+.stat b{font-family:Cinzel,serif;color:var(--maroon);font-size:1.35rem;display:block}
+.stat span{font-size:.92rem;color:var(--muted)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.photo-card{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:white}
+.photo-card img{width:100%;height:470px;object-fit:cover}
+.caption{padding:14px 18px;color:var(--muted);font-size:.9rem}
+.copy h3{font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.7rem;margin-bottom:13px}
+.copy p{margin-bottom:15px;color:#5d514a}
+.checks{list-style:none;display:grid;gap:10px;margin-top:18px}
+.checks li{position:relative;padding-left:28px;color:#51473f}
+.checks li:before{content:"✦";position:absolute;left:0;top:0;color:var(--saffron);font-weight:800}
+.quote-box{margin-top:26px;border-left:4px solid var(--gold);padding:17px 20px;background:#fff7e9;border-radius:0 14px 14px 0}
+.quote-box .dev{font-family:"Noto Sans Devanagari",sans-serif;font-size:1.1rem;color:var(--maroon);margin-bottom:8px}
+.quote-box p{margin:0;color:#65564d}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 10px 32px rgba(65,28,18,.06)}
+.card .icon{width:46px;height:46px;border-radius:14px;background:#fff1da;color:var(--maroon);display:grid;place-items:center;font-size:1.25rem;margin-bottom:16px}
+.card h3{font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.25rem;line-height:1.25;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+
+.heritage{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.heritage img{width:100%;max-height:450px;object-fit:contain;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.pill-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.pill{background:#fff1da;border:1px solid #f0d6a9;color:#68401e;padding:7px 12px;border-radius:999px;font-weight:600;font-size:.9rem}
+
+.education-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.edu-card{background:linear-gradient(145deg,#fffdf8,#fff5e4);border:1px solid var(--line);border-radius:22px;padding:28px}
+.edu-card .range{font-family:Cinzel,serif;color:var(--saffron);font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.edu-card h3{font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.65rem;margin:7px 0}
+.edu-card p{color:var(--muted)}
+.edu-list{margin-top:17px;padding-left:19px;color:#554a43}
+.exam-strip{margin-top:20px;padding:19px 22px;border-radius:16px;background:var(--deep);color:#fff4dc}
+.exam-strip strong{color:#ffd878}
+
+.shakhas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.shakha{border-top:4px solid var(--gold);background:white;border-radius:16px;padding:22px;border:1px solid var(--line)}
+.shakha h3{font-family:Cinzel,serif;color:var(--maroon);margin-bottom:10px}
+.shakha ul{list-style:none;color:var(--muted)}
+.shakha li{padding:6px 0;border-bottom:1px dashed #e8dece}.shakha li:last-child{border-bottom:0}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery button{border:0;background:none;padding:0;cursor:pointer;border-radius:16px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:235px;object-fit:cover;transition:transform .35s}
+.gallery button:hover img{transform:scale(1.045)}
+.gallery button:after{content:"View photo";position:absolute;left:12px;bottom:10px;background:rgba(40,17,15,.75);color:white;padding:5px 9px;border-radius:999px;font-size:.75rem;opacity:0;transition:.2s}
+.gallery button:hover:after{opacity:1}
+.gallery .wide{grid-column:span 2}
+.gallery .wide img{height:290px}
+
+.trustees{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.person{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}
+.avatar{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;background:#fff0d8;color:var(--maroon);display:grid;place-items:center;font-family:Cinzel,serif;font-weight:700}
+.person h3{font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.05rem}
+.person span{display:block;color:var(--saffron);font-size:.74rem;text-transform:uppercase;font-weight:800;letter-spacing:.08em;margin-top:4px}
+
+.donation{display:grid;grid-template-columns:1.1fr .9fr;gap:25px}
+.donation-card{background:white;border:1px solid var(--line);border-radius:22px;padding:27px}
+.scheme{display:grid;grid-template-columns:1fr auto;gap:15px;padding:16px 0;border-bottom:1px dashed #e2d7c7}
+.scheme:last-child{border-bottom:0}.scheme h3{font-size:1rem;color:var(--maroon)}.scheme p{font-size:.9rem;color:var(--muted)}
+.amount{white-space:nowrap;font-weight:800;color:#67401e;background:#fff1da;border-radius:999px;padding:6px 10px;height:max-content;font-size:.84rem}
+.bank{background:var(--deep);color:#fff5df}
+.bank h3{font-family:Cinzel,serif;color:#ffd878;margin-bottom:18px}
+.bank-row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.15);padding:11px 0}
+.bank-row span:first-child{color:#e6cdb0}.bank-row strong{color:#fff;text-align:right}
+.copy-btn{border:1px solid rgba(255,255,255,.3);background:transparent;color:white;border-radius:7px;padding:3px 8px;margin-left:5px;cursor:pointer;font-size:.75rem}
+.note{margin-top:18px;color:#ead9c0;font-size:.86rem}
+
+.documents{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.doc{background:white;border:1px solid var(--line);border-radius:18px;padding:21px}
+.doc .doc-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--saffron);font-weight:800}
+.doc h3{font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.15rem;margin:7px 0}
+.doc p{color:var(--muted);font-size:.88rem;min-height:72px}
+.doc a{display:inline-flex;margin-top:12px;color:var(--maroon);font-weight:800;border-bottom:1px solid #e8c98c}
+
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+.contact-card,.form-card{background:white;border:1px solid var(--line);border-radius:22px;padding:28px}
+.contact-item{padding:15px 0;border-bottom:1px dashed #e2d7c7}.contact-item:last-child{border:0}
+.contact-item small{display:block;color:var(--saffron);text-transform:uppercase;font-weight:800;letter-spacing:.08em}
+.contact-item a:hover{color:var(--maroon)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:6px}.field.full{grid-column:1/-1}
+label{font-weight:700;color:#51453e}input,textarea{border:1px solid #dfd3c2;border-radius:10px;padding:11px 12px;background:#fffdf9;outline:none}input:focus,textarea:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(201,120,36,.12)}textarea{min-height:135px;resize:vertical}
+
+footer{background:#2b1718;color:#e9d9c7;padding:42px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .9fr;gap:35px}
+footer h3{font-family:Cinzel,serif;color:#ffd878;margin-bottom:11px}
+footer p,footer li{color:#d4c0ac;font-size:.9rem}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a:hover{color:#ffd878}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;font-size:.8rem;color:#bba797}
+
+.lightbox{position:fixed;inset:0;background:rgba(15,7,7,.92);z-index:2000;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,94vw);max-height:86vh;object-fit:contain;border-radius:12px}
+.lightbox button{position:absolute;border:0;background:rgba(255,255,255,.13);color:white;width:44px;height:44px;border-radius:50%;font-size:1.7rem;cursor:pointer}
+.lightbox .close{top:20px;right:20px}.lightbox .prev{left:20px}.lightbox .next{right:20px}
+.toast{position:fixed;right:20px;bottom:20px;background:var(--deep);color:#fff;padding:11px 16px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s;z-index:2500}
+.toast.show{opacity:1;transform:none}
+.to-top{position:fixed;right:20px;bottom:75px;width:42px;height:42px;border:0;border-radius:50%;background:var(--maroon);color:white;cursor:pointer;display:none;z-index:900}
+.to-top.show{display:block}
+
+@media(max-width:1000px){
+ .nav-links{gap:0}.nav-links a{padding:9px 8px;font-size:.86rem}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .cards{grid-template-columns:repeat(2,1fr)}.shakhas{grid-template-columns:repeat(2,1fr)}
+ .trustees{grid-template-columns:repeat(3,1fr)}.documents{grid-template-columns:repeat(2,1fr)}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:780px){
+ .topbar-inner{justify-content:center;text-align:center}.topbar-inner span:last-child{display:none}
+ .nav{min-height:70px}.menu-toggle{display:block}
+ .nav-links{position:fixed;inset:70px 0 auto 0;background:rgba(255,253,249,.99);border-bottom:1px solid var(--line);padding:15px 20px;display:none;flex-direction:column;align-items:stretch;box-shadow:0 20px 35px rgba(0,0,0,.08)}
+ .nav-links.open{display:flex}.nav-links a{padding:12px 14px}
+ .hero{min-height:auto}.hero-grid,.split,.heritage,.donation,.contact-grid{grid-template-columns:1fr}
+ .hero-content{padding:72px 0}.hero-card{max-width:520px}
+ .photo-card img{height:340px}.gallery .wide{grid-column:span 1}.gallery img,.gallery .wide img{height:240px}
+ .trustees{grid-template-columns:repeat(2,1fr)}
+ .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+ .container{width:min(var(--max),calc(100% - 28px))}
+ .brand-text strong{font-size:.86rem}.brand-text span{font-size:.64rem}.brand-mark{width:48px;height:48px}.brand-mark img{width:40px;height:40px}
+ .stats,.cards,.shakhas,.education-grid,.gallery,.documents{grid-template-columns:1fr}
+ .stats{margin-top:-30px}.stat{padding:16px}
+ .section{padding:65px 0}.section-head{margin-bottom:32px}
+ .form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+ .scheme{grid-template-columns:1fr}.amount{width:max-content}
+ .bank-row{display:block}.bank-row strong{display:block;text-align:left;margin-top:3px}
+ .hero-actions .btn{width:100%}
+ .trustees{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>श्री गुरुभ्यो नमः · श्री वेद व्यासाय नमः</span>
+    <span>Assam · India &nbsp;|&nbsp; <a href="mailto:vedic_yagyas@rediffmail.com">vedic_yagyas@rediffmail.com</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Shree Guru Shankaracharya Veda Vidyalaya home">
+      <span class="brand-mark"><img src="images/shankaracharya-logo.png" alt="Shankaracharya emblem"></span>
+      <span class="brand-text">
+        <strong>Shree Guru Shankaracharya Veda Vidyalaya</strong>
+        <span>श्री गुरु शङ्कराचार्य वेद विद्यालय · Assam</span>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a>
+      <a href="#initiatives">Initiatives</a><a href="#vedas">Vedas</a><a href="#gallery">Gallery</a>
+      <a href="#trustees">Trustees</a><a href="#documents">Records</a><a class="nav-cta" href="#donate">Donate</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg"></div><div class="hero-pattern"></div>
+  <div class="container hero-content">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Vedic heritage · Gurukula · Assam</div>
+        <h1>Preserving the living tradition of the Vedas.</h1>
+        <div class="sanskrit">“वेद एक वृक्ष है; विप्र उसकी जड़ें हैं।”</div>
+        <p class="hero-lead">Supporting Vedic scholars, Pāṭhaśālās and traditional learning so that knowledge, recitation and disciplined practice may continue for future generations.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">Explore the Mission</a>
+          <a class="btn btn-light" href="#donate">Support Vedic Education</a>
+        </div>
+        <div class="scroll-note">↓ Discover the Vidyalaya, its initiatives and Veda Śākhās</div>
+      </div>
+      <aside class="hero-card">
+        <div class="seal"><img src="images/shankaracharya-logo.png" alt=""></div>
+        <h3>Shree Guru Shankaracharya Veda Vidyalaya Samity</h3>
+        <p>Traditional Vedic education and heritage preservation from Assam.</p>
+        <div class="address">Nepali Pathar, P.O. Gameri<br>Biswanath, Assam · 784172</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="stats">
+    <div class="stat"><b>Class 6–12</b><span>Vedic academic pathway</span></div>
+    <div class="stat"><b>4 Vedas</b><span>Multiple Śākhās supported</span></div>
+    <div class="stat"><b>Pan-India</b><span>Assistance to deserving Pāṭhaśālās</span></div>
+    <div class="stat"><b>Assam</b><span>Home of the Vidyalaya</span></div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">About the Vidyalaya</div><h2>A Gurukula tradition rooted in preservation</h2><p>The supplied institutional material describes SGSVVS as a public charitable trust dedicated to preserving and promoting traditional Vedic learning.</p></div>
+    <div class="split">
+      <div class="photo-card">
+        <img src="images/students.jpg" alt="Students of the Vidyalaya gathered outside the building" loading="lazy">
+        <div class="caption">Students gathered at the Vidyalaya · supplied photograph</div>
+      </div>
+      <div class="copy">
+        <h3>Mission &amp; vision</h3>
+        <p>The Gurukula framework presented in the institution’s material integrates Vedic knowledge, discipline, humility, character formation and spiritual growth. Education is described as an immersive way of life rather than classroom study alone.</p>
+        <ul class="checks">
+          <li>Uphold the Guru–Śiṣya tradition and extend opportunities to deserving students.</li>
+          <li>Provide educational and financial support to Vedic scholars and institutions.</li>
+          <li>Preserve, protect, promote and disseminate the Vedas in the traditional manner.</li>
+          <li>Safeguard the distinctiveness of each Vedic recitation branch.</li>
+          <li>Support rare Veda Śākhās through systematic training.</li>
+        </ul>
+        <div class="quote-box">
+          <div class="dev">वेद एक वृक्ष है…</div>
+          <p>“The Vedas are a tree. The learned Brahmins are its roots… Therefore, the roots must be protected with great care.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="heritage">
+      <img src="images/veda-tree.jpg" alt="Veda Rakshanam tree illustration" loading="lazy">
+      <div class="copy">
+        <div class="kicker">Veda Rakshanam</div>
+        <h2>Water the roots of the Vedic tree</h2>
+        <p>The supplied Veda Vṛkṣa message presents scholars as the roots, the Veda Śākhās as the branches, and dharma and karma as the leaves. The central idea is preservation through sustained support for the roots of learning.</p>
+        <p>The trust material also describes hereditary learning, support for rare recensions, financial assistance and academic monitoring as practical ways of sustaining this heritage.</p>
+        <div class="pill-list"><span class="pill">Vedic Heritage</span><span class="pill">Guru–Śiṣya Paramparā</span><span class="pill">Traditional Recitation</span><span class="pill">Future Generations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="initiatives" class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Mission in action</div><h2>Major initiatives</h2><p>Programmes described in the supplied institutional material focus on continuity, quality and access.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">ॐ</div><h3>Hereditary Niyama Adhyayanam</h3><p>Reviving hereditary Vedic learning where knowledge is transmitted within the family lineage, with emphasis on pronunciation and intonation.</p></article>
+      <article class="card"><div class="icon">॥</div><h3>Rare Veda Śākhās</h3><p>Supporting Pāṭhaśālās dedicated to rare Śākhās through disciplined training under qualified scholars.</p></article>
+      <article class="card"><div class="icon">✦</div><h3>Pan-India Assistance</h3><p>Financial assistance for deserving Veda Pāṭhaśālās, including institutions in remote and semi-urban locations.</p></article>
+      <article class="card"><div class="icon">✓</div><h3>Academic Monitoring</h3><p>Regular inspections and Varṣika Parīkṣā are described as mechanisms for maintaining academic rigor and traditional standards.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Wider charitable objects</div><h2>Education, culture and social outreach</h2><p>The supplied Memorandum of Association records a wider set of charitable objectives alongside Vedic and cultural work.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">📜</div><h3>Indian Knowledge</h3><p>Promoting literacy in Vedas, Vedānta, Jyotiṣa, Vyākaraṇa, Dharma Śāstra, Purāṇa, Āyurveda and related Indian literature.</p></article>
+      <article class="card"><div class="icon">🌱</div><h3>Environment</h3><p>Environmental protection, cleanliness awareness and tree-plantation activities are included among the stated objects.</p></article>
+      <article class="card"><div class="icon">📚</div><h3>Education &amp; Training</h3><p>Educational classes, seminars, libraries and training activities are included in the society’s stated objectives.</p></article>
+      <article class="card"><div class="icon">🤝</div><h3>Community Development</h3><p>The memorandum also describes health camps, social and economic upliftment and youth training for employment generation.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Academic pathway</div><h2>Vedic education &amp; examinations</h2><p>The supplied website material describes a Class 6–12 pathway coordinated with Maharshi Sandipani Rashtriya Veda Sanskrit Shiksha Board (MSRVSSB).</p></div>
+    <div class="education-grid">
+      <article class="edu-card">
+        <div class="range">Classes 6–10</div><h3>Veda Bhushan</h3>
+        <p>A structured stage of Vedic study alongside the educational framework described for the Vidyalaya.</p>
+        <ul class="edu-list"><li>Traditional Veda study and recitation</li><li>Progressive academic evaluation</li><li>Discipline and Gurukula values</li></ul>
+      </article>
+      <article class="edu-card">
+        <div class="range">Classes 11–12</div><h3>Veda Vibhushan</h3>
+        <p>An advanced stage of study for students continuing the Vedic academic pathway.</p>
+        <ul class="edu-list"><li>Advanced Vedic proficiency</li><li>Half-yearly and annual assessments</li><li>Final examination and recognition</li></ul>
+      </article>
+    </div>
+    <div class="exam-strip"><strong>Parīkṣā &amp; recognition:</strong> the supplied material describes regular inspections, half-yearly and annual examinations, final proficiency certificates and recognition for outstanding Vidyārthīs. It also describes an advanced competition involving Mūlam, Padam, Kramam, Jaṭā and Gānam.</div>
+  </div>
+</section>
+
+<section id="vedas" class="section alt">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Vedic heritage</div><h2>Śākhās supported</h2><p>The following branches are listed in the supplied institutional material.</p></div>
+    <div class="shakhas">
+      <article class="shakha"><h3>Ṛg Veda</h3><ul><li>Śākala</li></ul></article>
+      <article class="shakha"><h3>Yajur Veda</h3><ul><li>Kṛṣṇa Yajur – Taittirīya</li><li>Śukla Yajur – Kāṇva</li><li>Śukla Yajur – Mādhyaṃdhina</li></ul></article>
+      <article class="shakha"><h3>Sāma Veda</h3><ul><li>Kauṭhūma</li><li>Jaiminīya</li><li>Rāṇāyanīya</li></ul></article>
+      <article class="shakha"><h3>Atharva Veda</h3><ul><li>Śaunaka</li><li>Pippalāda</li></ul></article>
+    </div>
+    <div class="split" style="margin-top:42px">
+      <div class="photo-card"><img src="images/veda-books.jpg" alt="Illustration of the four Vedas" loading="lazy"><div class="caption">The four Vedas · supplied institutional artwork</div></div>
+      <div class="copy"><h3>The Holy Vedas</h3><p>The supplied material describes the Vedas as Śabda-Brahman and as foundational to Bharatiya culture. It also presents Bhagavān Veda Vyāsa’s classification of the Vedas into four for preservation.</p><p>These ideas frame the Vidyalaya’s emphasis on accurate recitation, continuity of Śākhās and support for teachers and students.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Gallery</div><h2>Life around the Vidyalaya</h2><p>Photographs supplied for the website, showing the campus, students, Vedic gatherings and learning activities.</p></div>
+    <div class="gallery">
+      <button class="wide" data-full="images/building.jpg"><img src="images/building.jpg" alt="Vidyalaya building" loading="lazy"></button>
+      <button data-full="images/students.jpg"><img src="images/students.jpg" alt="Students outside the Vidyalaya" loading="lazy"></button>
+      <button data-full="images/classroom.jpg"><img src="images/classroom.jpg" alt="Vedic learning session" loading="lazy"></button>
+      <button data-full="images/conference.jpg"><img src="images/conference.jpg" alt="Vedic gathering" loading="lazy"></button>
+      <button data-full="images/students-event.jpg"><img src="images/students-event.jpg" alt="Students at an event" loading="lazy"></button>
+      <button data-full="images/conference-stage.jpg"><img src="images/conference-stage.jpg" alt="International Vedic conference stage" loading="lazy"></button>
+      <button data-full="images/veda-vyasa.jpg"><img src="images/veda-vyasa.jpg" alt="Illustration of Veda Vyasa" loading="lazy"></button>
+      <button data-full="images/veda-tree.jpg"><img src="images/veda-tree.jpg" alt="Veda Rakshanam tree illustration" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section id="trustees" class="section alt">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Leadership</div><h2>Trustees</h2><p>Names and roles reproduced from the supplied institutional material.</p></div>
+    <div class="trustees">
+      <article class="person"><div class="avatar">NS</div><h3>Narayan Sharma</h3><span>Executive Trustee</span></article>
+      <article class="person"><div class="avatar">TD</div><h3>Toyanath Dhamala</h3><span>Vice Executive</span></article>
+      <article class="person"><div class="avatar">HG</div><h3>Hiranya Ghimire</h3><span>Manager</span></article>
+      <article class="person"><div class="avatar">HS</div><h3>Homnath Sharma</h3><span>Treasurer</span></article>
+      <article class="person"><div class="avatar">CA</div><h3>Churamuni Adhikari</h3><span>Trustee</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="donate" class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Support the mission</div><h2>Donate &amp; sponsor Vedic learning</h2><p>The following schemes and bank details are reproduced from the supplied institutional material.</p></div>
+    <div class="donation">
+      <div class="donation-card">
+        <div class="scheme"><div><h3>Hereditary Niyama Adhyayanam (HNY)</h3><p>Support for hereditary Vedic scholars and the continuity of traditional learning.</p></div><div class="amount">₹5,000/month<br>or ₹8 lakh corpus</div></div>
+        <div class="scheme"><div><h3>Veda Pāṭhaśālā Sponsorship</h3><p>Sponsorship of Veda Pāṭhaśālās in villages and semi-urban locations.</p></div><div class="amount">₹60,000/month<br>or ₹7.20 lakh/year</div></div>
+        <div class="scheme"><div><h3>Vedic Awards – Parithoshikam</h3><p>Corpus for awards to outstanding Vidyārthīs and teachers.</p></div><div class="amount">₹10 lakh corpus</div></div>
+        <div class="scheme"><div><h3>Veda Vidyārthi Sponsorship</h3><p>Support for the Vedic education of a Vidyārthi across states.</p></div><div class="amount">Contact trust</div></div>
+        <div class="scheme"><div><h3>Yearly Janma Nakṣatra Donation</h3><p>Annual contribution linked to star birthday/date of birth; the supplied material mentions prasādam for donors.</p></div><div class="amount">₹1,116/year</div></div>
+        <div class="scheme"><div><h3>Monthly Veda Pārāyaṇam</h3><p>Chatur Veda Pārāyaṇam at Shree Guru Shankaracharya Veda Vidyalaya.</p></div><div class="amount">₹12,500/month<br>or ₹1.50 lakh/year</div></div>
+        <div class="scheme"><div><h3>One-time Veda Rakshanam contribution</h3><p>Generic contribution for trust activities.</p></div><div class="amount">₹5,000</div></div>
+      </div>
+      <div class="donation-card bank">
+        <h3>Bank transfer</h3>
+        <div class="bank-row"><span>Bank</span><strong>State Bank of India<br>Gohapur Balijan, Assam</strong></div>
+        <div class="bank-row"><span>Account name</span><strong>Shree Guru Sankaracharya Veda Vidyalaya Samity</strong></div>
+        <div class="bank-row"><span>Account number</span><strong>31031210682 <button class="copy-btn" data-copy="31031210682">Copy</button></strong></div>
+        <div class="bank-row"><span>IFSC</span><strong>SBIN0009140 <button class="copy-btn" data-copy="SBIN0009140">Copy</button></strong></div>
+        <p class="note">After an online transfer, the supplied material asks donors to email the transfer details to <a href="mailto:vedic_yagyas@rediffmail.com" style="color:#ffd878">vedic_yagyas@rediffmail.com</a> so a receipt can be issued.</p>
+        <p class="note"><strong>Tax note:</strong> the supplied institutional material states that 80G benefits are available. The supplied 12AB order separately notes that 12AB registration does not automatically confer 80G deduction eligibility, so donors should confirm the current 80G position and receipt requirements with the trust before claiming a deduction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="documents" class="section alt">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Transparency &amp; records</div><h2>Institutional documents</h2><p>Original supplied documents are included in the website package for reference.</p></div>
+    <div class="documents">
+      <article class="doc"><div class="doc-tag">Society</div><h3>Registration Certificate</h3><p>Certificate of Registration under the Societies Act XXI of 1860, issued in Assam; the supplied certificate records renewal validity through 28 April 2028.</p><a href="documents/society-registration-certificate-2025.pdf" target="_blank" rel="noopener">View certificate →</a></article>
+      <article class="doc"><div class="doc-tag">Society</div><h3>Memorandum of Association</h3><p>Supplied memorandum describing the society’s aims, objectives, governance and wider charitable activities.</p><a href="documents/society-memorandum.pdf" target="_blank" rel="noopener">View memorandum →</a></article>
+      <article class="doc"><div class="doc-tag">Income Tax</div><h3>12AB Registration Order</h3><p>Income Tax Department Form 10AD dated 2 March 2026; the supplied order records registration under section 12AB(1)(b).</p><a href="documents/income-tax-12ab-order-2026.pdf" target="_blank" rel="noopener">View order →</a></article>
+      <article class="doc"><div class="doc-tag">CSR</div><h3>CSR Registration</h3><p>Ministry of Corporate Affairs letter recording CSR registration number CSR00037542.</p><a href="documents/csr-registration.pdf" target="_blank" rel="noopener">View CSR letter →</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Get in touch</div><h2>Contact the Vidyalaya</h2><p>For admissions, sponsorship, donations, Veda Pāṭhaśālā support or other enquiries.</p></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-item"><small>Address</small><strong>Shree Guru Shankaracharya Veda Vidyalaya Samity</strong><br>At: Nepali Pathar, Post: Gameri<br>Dist: Biswanath, Assam · 784172 · India</div>
+        <div class="contact-item"><small>Email</small><a href="mailto:vedic_yagyas@rediffmail.com">vedic_yagyas@rediffmail.com</a></div>
+        <div class="contact-item"><small>CSR Registration</small><strong>CSR00037542</strong></div>
+        <div class="contact-item"><small>Society Registration</small><strong>RS/KAM/240/A-8/537 of 2007</strong></div>
+        <div class="contact-item"><small>Income Tax Registration</small><strong>12AB(1)(b) · AAJAS4517N25KL01</strong></div>
+      </div>
+      <div class="form-card">
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+            <div class="field full"><label for="subject">Subject</label><input id="subject" name="subject" value="Website enquiry"></div>
+            <div class="field full"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+            <div class="field full"><button class="btn btn-primary" type="submit">Send enquiry by email</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>Shree Guru Shankaracharya Veda Vidyalaya</h3><p>Preserving Vedic learning, traditional recitation and the Gurukula heritage for future generations.</p><p style="margin-top:10px">श्री गुरुभ्यो नमः · श्री वेद व्यासाय नमः</p></div>
+      <div><h3>Explore</h3><ul><li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#initiatives">Initiatives</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#donate">Donate</a></li></ul></div>
+      <div><h3>Contact</h3><p>Gameri, Biswanath<br>Assam · 784172 · India</p><p style="margin-top:8px"><a href="mailto:vedic_yagyas@rediffmail.com">vedic_yagyas@rediffmail.com</a></p></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Shree Guru Shankaracharya Veda Vidyalaya Samity</span><span>Website content assembled from supplied institutional materials.</span></div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="close" aria-label="Close">×</button><button class="prev" aria-label="Previous">‹</button>
+  <img id="lightboxImg" src="" alt=""><button class="next" aria-label="Next">›</button>
+</div>
+<div class="toast" id="toast">Copied</div>
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+const menu=document.querySelector('.menu-toggle'), links=document.querySelector('.nav-links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',open);document.body.classList.toggle('menu-open',open)});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')}));
+const sections=[...document.querySelectorAll('main section[id]')], navAs=[...document.querySelectorAll('.nav-links a')];
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(s=>obs.observe(s));
+document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(btn.dataset.copy)}catch(e){const ta=document.createElement('textarea');ta.value=btn.dataset.copy;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}const t=document.getElementById('toast');t.textContent='Copied: '+btn.dataset.copy;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}));
+const gallery=[...document.querySelectorAll('.gallery button')], lb=document.getElementById('lightbox'), lbImg=document.getElementById('lightboxImg');let gi=0;
+function show(i){gi=(i+gallery.length)%gallery.length;lbImg.src=gallery[gi].dataset.full;lbImg.alt=gallery[gi].querySelector('img').alt;lb.classList.add('open');lb.setAttribute('aria-hidden','false')}
+gallery.forEach((b,i)=>b.addEventListener('click',()=>show(i)));
+document.querySelector('.lightbox .close').onclick=()=>{lb.classList.remove('open');lb.setAttribute('aria-hidden','true')};
+document.querySelector('.lightbox .prev').onclick=()=>show(gi-1);document.querySelector('.lightbox .next').onclick=()=>show(gi+1);
+lb.addEventListener('click',e=>{if(e.target===lb)document.querySelector('.lightbox .close').click()});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')document.querySelector('.lightbox .close').click();if(e.key==='ArrowLeft')show(gi-1);if(e.key==='ArrowRight')show(gi+1)});
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const body=`Name: ${f.get('name')}\nEmail: ${f.get('email')}\n\n${f.get('message')}`;location.href=`mailto:vedic_yagyas@rediffmail.com?subject=${encodeURIComponent(f.get('subject'))}&body=${encodeURIComponent(body)}`});
+const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>toTop.classList.toggle('show',scrollY>500));toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
